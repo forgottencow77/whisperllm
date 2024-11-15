@@ -18,7 +18,7 @@ import threading
 import socket  # Add import for socket communication
 
 # Load environment variables from the specified .env file
-load_dotenv('/Users/forgottencow/Documents/GitHub/tenkaurobots/言語/.env')
+load_dotenv() 
 
 class TextFileWriterTool(BaseTool):
     """Tool that writes input text to a specified text file."""
@@ -29,7 +29,7 @@ class TextFileWriterTool(BaseTool):
 
     def __init__(self) -> None:
         super().__init__()
-        self.file_path = "/Users/forgottencow/Documents/GitHub/tenkaurobots/言語/myfile.txt"
+        self.file_path = "" #give path
         if self.file_path is None:
             raise ValueError("Environment variable 'MY_FILE_PATH' is not set.")
 
